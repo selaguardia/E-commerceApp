@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', { page: 'New Product'}) %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+     <!-- Header-->
+  <header class="bg-dark py-1">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Add New Product</h1>
+        </div>
+    </div>
+  </header>
+    <!-- Product section-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              
+                              <form class="align-items-center my-5" action="/products" method="POST">
+                                  <div class="form-row" >
+                                    
+                                      <div class="col mb-3">
+                                      <label for="validationDefault01">Product Name:</label>
+                                      <input name="name" type="text" class="form-control" id="validationDefault01"  value="Coat" required>
+                                    </div>
+              
+                                    <div class="col mb-3">
+                                      <label class="sr-only" for="validationDefault03">Product Price</label>
+                                      <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                          <div class="input-group-text">$</div>
+                                        </div>
+                                        <input name="price" type="number" class="form-control" id="validationDefault02" value="999" required>
+                                      </div>
+                                    </div>
+              
+                                    <div class="col mb-3">
+                                      <label for="validationDefault03">Product URL:</label>
+                                      <input name="image" type="text" class="form-control" id="validationDefault03"  value="https://picsum.photos/300" required>
+                                    </div>
+              
+                                  </div>
+              
+                                  <button class="btn btn-primary" type="submit">Add Product</button>
+                              </form>
+
+                              <p><strong>* Click submit to add product to inventory.</strong></p>
+                              <p>Or add your own. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

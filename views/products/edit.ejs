@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', { page: 'Edit Product'}) %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+  <!-- Header-->
+  <header class="bg-dark py-1">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Edit Product Page</h1>
+        </div>
+    </div>
+  </header>
+    <!-- Product section-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              
+                              <form class="align-items-center my-5" action="/products/<%= product.id %>?_method=PUT" method="POST">
+                                  <div class="form-row" >
+                                    
+                                      <div class="col mb-3">
+                                      <label for="validationDefault01">Product Name:</label>
+                                      <input name="name" type="text" class="form-control" id="validationDefault01"  value="<%= product.name %>" required>
+                                    </div>
+              
+                                    <div class="col mb-3">
+                                      <label class="sr-only" for="validationDefault03">Product Price</label>
+                                      <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                          <div class="input-group-text">$</div>
+                                        </div>
+                                        <input name="price" type="number" class="form-control" id="validationDefault02" value="<%= product.price %>" required>
+                                      </div>
+                                    </div>
+              
+                                    <div class="col mb-3">
+                                      <label for="validationDefault03">Product URL: *</label>
+                                      <input name="image" type="text" class="form-control" id="validationDefault03"  value="<%= product.image %>" required>
+                                    </div>
+              
+                                  </div>
+                                  <!-- Cancel button -->
+                                  <a class="btn btn-outline-dark flex-shrink-0" href="/products/<%= product.id %>">Cancel</a>
+                                  
+                                  <!-- Update Button -->
+                                  <button class="btn btn-outline-dark flex-shrink-0 " type="submit" >Update</button>
+                                 
+                              </form>
+                              <div class="container">
+                                <p><strong>*Choose your own product URL, or copy one of the following.</strong></p>
+                                <p><strong>Red Nike Running Shoes</strong></p>
+                                <p>https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80</p>
+                                <p><strong>Headphones</strong></p>
+                                <p>https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60</p>     
+                              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
