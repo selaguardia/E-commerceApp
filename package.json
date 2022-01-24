@@ -1,12 +1,12 @@
 {
   "name": "ecommerce",
   "version": "1.0.0",
-  "description": "",
+  "description": "E-commerce website using NEM stack with full CRUD functionalities.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sergio Laguardia sergioslaguardia@gmail.com",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^14.3.0",
