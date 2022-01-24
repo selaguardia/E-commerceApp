@@ -20,6 +20,11 @@ app.use(methodOverride('_method'));
 app.use("/products", controllers.product);
 app.use("/reviews", controllers.review);
 
+// Redirect to homepage
+app.get('/', (req, res) => {
+  return res.redirect('/products')
+})
+
 // 404 page
 app.use("/*", (req, res) => {
   const context = { error: req.error };
