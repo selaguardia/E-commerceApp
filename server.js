@@ -5,7 +5,7 @@ const controllers = require('./controllers');
 const methodOverride = require('method-override');
 require('dotenv').config();
 
-/* DB CONNNECTION */
+/* Database CONNNECTION */
 require('./config/db.connection');
 
 // Middleware
