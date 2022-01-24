@@ -74,15 +74,17 @@
               <article class="media">
                 <div class="media-left">
                   <figure class="image is-64x64">
-                    <img src="<%= review.product.image %>" alt="Image" />
+                    <a href="/products/<%=review.product._id%>"><img src="<%= review.product.image %>" alt="Image" /></a>
                   </figure>
                 </div>
                 <div class="media-content">
                   <div class="content">
                     <strong><%= review.name %></strong>
+                    
                     <small>
                       <%= new Date(review.createdAt).toLocaleString() %>
                     </small>
+                    
                     <br />
                           <!-- here are looping and creating 5 stars. as we are looping we lookign at the current index and up to the review rating we will make it yellow. -->
                     <% for( let index = 0; index < 5; index++ ) { %>
@@ -97,9 +99,12 @@
 
                     <% } %>
                     <br />
-                    <%= review.content %>
-                    <hr />
+                    <strong>Product: </strong>
                     <a href="/products/<%=review.product._id%>"><%= review.product.name %></a>
+                    <br />
+                    <strong>Review: </strong>
+                    <br />
+                    <%= review.content %>
 
                   </div>
                 </div>
